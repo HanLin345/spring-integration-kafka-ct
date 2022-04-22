@@ -8,17 +8,17 @@ import org.springframework.messaging.MessagingException
 
 import java.util.concurrent.CountDownLatch
 
-class CountDownLatchHandler : MessageHandler {
-    val latch = CountDownLatch(10)
+class SimpleHandler : MessageHandler {
+
 
     @Throws(MessagingException::class)
     override fun handleMessage(message: Message<*>) {
         LOGGER.info("received message='{}'", message)
-        latch.countDown()
+      //  latch.countDown()
     }
 
     companion object {
-        private val LOGGER: Logger = LoggerFactory.getLogger(CountDownLatchHandler::class.java)
+        private val LOGGER: Logger = LoggerFactory.getLogger(SimpleHandler::class.java)
     }
 
 }

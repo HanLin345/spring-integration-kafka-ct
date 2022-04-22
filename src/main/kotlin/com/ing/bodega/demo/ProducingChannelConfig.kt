@@ -52,4 +52,5 @@ class ProducingChannelConfig {
         properties[ProducerConfig.LINGER_MS_CONFIG] = 1
         return properties
     }
+
 }
