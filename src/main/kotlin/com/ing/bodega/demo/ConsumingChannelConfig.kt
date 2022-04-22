@@ -35,8 +35,8 @@ class ConsumingChannelConfig {
 
     @Bean
     @ServiceActivator(inputChannel = "consumingChannel")
-    fun countDownLatchHandler(): CountDownLatchHandler {
-        return CountDownLatchHandler()
+    fun countDownLatchHandler(): SimpleHandler {
+        return SimpleHandler()
     }
 
     @Bean
